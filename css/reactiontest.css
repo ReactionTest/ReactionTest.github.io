@@ -718,9 +718,18 @@ section {
   contain-intrinsic-size: 700px;
 }
 
+.top-bottom-padding {
+    padding-top: 20px; /* Adjust the top padding value as needed */
+    /*padding-bottom:20px;/* Adjust the bottom padding value as needed */
+}
+
 .section-padding {
-  padding-top: 7rem;
+  padding-top: 1rem;
   padding-bottom: 7rem;
+}
+
+.justify-text {
+    text-align: justify;
 }
 
 .featured {
