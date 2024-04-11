@@ -995,6 +995,35 @@ button:focus:not(:focus-visible) {
   background: var(--primary-color);
 }
 
+/* Styling for radio buttons */
+.form-element.radio-buttons label {
+  display: inline-block;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+/* Custom radio button style */
+.form-element.radio-buttons input[type='radio'] + label::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--grey-color);
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* Styling for radio buttons when selected */
+.form-element.radio-buttons input[type='radio']:checked + label::before {
+  background-color: var(--dark-color); /* Change background color when selected */
+}
+
+/* Styling for radio button label text */
+.form-element.radio-buttons label span {
+  vertical-align: middle;
+}
+
 /*---------------------------------------
   SITE FOOTER               
 -----------------------------------------*/
