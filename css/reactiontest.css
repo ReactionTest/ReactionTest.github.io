@@ -900,6 +900,17 @@ button:focus:not(:focus-visible) {
   background: var(--white-color);
   position: relative;
   transition: all 0.5s ease-out;
+  padding: 10px;
+  padding-bottom: 10px;
+}
+
+.product-thumb2 img {
+  background: var(--white-color);
+  transition: all 0.5s ease-out;
+  margin-top: 20px;
+  scale: 100%;
+  /* height: 0px;
+  width: auto; */
 }
 
 .product-image {
@@ -907,7 +918,7 @@ button:focus:not(:focus-visible) {
 }
 
 .product-thumb:hover .product-image {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
+  box-shadow: 0.5rem 0.5rem 0.5rem rgba(0,0,0,.2);
 }
 
 .product-top {
