@@ -166,6 +166,21 @@ a:hover {
   font-weight: var(--font-weight-thin);
 }
 
+.lead_tools {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-light);
+}
+
+.lead_tools_1 {
+  font-size: 1.3rem;
+  font-weight: var(--font-weight-light);
+}
+
+.lead_tools_heading {
+  font-size: 1.2rem;
+  font-weight: var(--font-weight-bold);
+}
+
 b,
 strong {
   font-weight: var(--font-weight-bold);
@@ -945,6 +960,12 @@ button:focus:not(:focus-visible) {
 .product-title-link {
   color: var(--dark-color);
 }
+
+.inline-link {
+  color: rgba(190,74,96,255);
+}
+
+
 
 .product-additional-link {
   display: inline-block;
