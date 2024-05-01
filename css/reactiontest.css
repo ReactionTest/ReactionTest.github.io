@@ -965,8 +965,6 @@ button:focus:not(:focus-visible) {
   color: rgba(190,74,96,255);
 }
 
-
-
 .product-additional-link {
   display: inline-block;
   vertical-align: top;
