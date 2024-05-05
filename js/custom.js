@@ -55,6 +55,16 @@ for (var i = 0; i < img.length; i++) {
     }
 }
 
+// Get all elements inside the modal
+var modalElements = modal.querySelectorAll("*");
+
+// Iterate over all elements inside the modal to handle touch events
+modalElements.forEach(function(element) {
+    element.addEventListener("touchstart", function(event) {
+        event.stopPropagation(); // Stop the touch event from propagating to the modal background
+    });
+});
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
