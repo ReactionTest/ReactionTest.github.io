@@ -61,6 +61,9 @@ var modalElements = modal.querySelectorAll("*");
 // Iterate over all elements inside the modal to handle touch events
 modalElements.forEach(function(element) {
     element.addEventListener("touchstart", function(event) {
+        if (element === modalContent) {
+            closeModal();
+        }
         event.stopPropagation(); // Stop the touch event from propagating to the modal background
     });
 });
@@ -82,13 +85,6 @@ window.addEventListener("keydown", function(event) {
 
 // Close the modal when user clicks outside the image on the background
 modal.addEventListener("click", function(event) {
-    if (event.target === modal) {
-        closeModal();
-    }
-});
-
-// Handle touch events to close the modal
-modal.addEventListener("touchstart", function(event) {
     if (event.target === modal) {
         closeModal();
     }
