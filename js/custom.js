@@ -34,6 +34,9 @@
 // Get the modal
 var modal = document.getElementById("imageModal");
 
+// Get the modal content
+var modalContent = document.querySelector(".modal-content");
+
 // Get the image and insert it inside the modal
 var img = document.getElementsByClassName("product-image");
 var modalImg = document.getElementById("modalImage");
@@ -56,14 +59,25 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on <span> (x) or presses Esc, close the modal
 span.onclick = function () {
-    modal.style.display = "none";
-    document.body.style.overflow = ""; // Restore overflow
+    closeModal();
 }
 
 // Close the modal when Esc key is pressed
 window.addEventListener("keydown", function(event) {
     if (event.key === "Escape") {
-        modal.style.display = "none";
-        document.body.style.overflow = ""; // Restore overflow
+        closeModal();
     }
 });
+
+// Close the modal when user clicks outside the image on the background
+modal.addEventListener("click", function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+    document.body.style.overflow = ""; // Restore overflow
+}
