@@ -41,7 +41,8 @@ var modalContent = document.querySelector(".modal-content");
 var img = document.getElementsByClassName("product-image");
 var modalImg = document.getElementById("modalImage");
 for (var i = 0; i < img.length; i++) {
-    img[i].onclick = function () {
+    img[i].onclick = function (event) {
+        event.stopPropagation(); // Stop the click event from propagating to the modal background
         if (this.parentElement.tagName.toLowerCase() === "a" && this.parentElement.getAttribute("href")) {
             // If the clicked image has a parent <a> element with an href attribute, follow the link
             window.location.href = this.parentElement.getAttribute("href");
