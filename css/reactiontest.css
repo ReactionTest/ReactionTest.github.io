@@ -1248,3 +1248,44 @@ button:focus:not(:focus-visible) {
   }
 }
 
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent background */
+  backdrop-filter: blur(10px); /* blur the background */
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.modal-content {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60%; /* 70% of the screen width */
+  max-height: 60%; /* 70% of the screen height */
+}
+
+.modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Scale the image proportionally to fit within the container */
+  display: block; /* Prevent image from displaying inline */
+  box-shadow: 0.05rem 0.05rem 3.5rem rgba(190,74,96,.5); /* Set box shadow on hover */
+}
+
+/* Close button styles */
+.close {
+  color: var(--white-color);
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  font-size: 35px;
+  cursor: pointer;
+}
