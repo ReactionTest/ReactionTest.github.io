@@ -1289,3 +1289,10 @@ button:focus:not(:focus-visible) {
   font-size: 35px;
   cursor: pointer;
 }
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .modal-content {
+    max-width: 100%; /* Set max width to 100% for smaller screens */
+  }
+}
