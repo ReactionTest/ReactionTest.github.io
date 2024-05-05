@@ -76,6 +76,13 @@ modal.addEventListener("click", function(event) {
     }
 });
 
+// Handle touch events to close the modal
+modal.addEventListener("touchstart", function(event) {
+    if (event.target === modal) {
+        closeModal();
+    }
+});
+
 // Function to close the modal
 function closeModal() {
     modal.style.display = "none";
